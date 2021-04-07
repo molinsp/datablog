@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Best footbal transactions 2015-2020 | Pere’s data blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Best footbal transactions 2015-2020" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Analyzing player performance to determine the best transactions" />
+<meta property="og:description" content="Analyzing player performance to determine the best transactions" />
+<link rel="canonical" href="https://molinsp.github.io/datablog/jupyter/2021/02/24/FIFA_analysis_of_best_transactions.html" />
+<meta property="og:url" content="https://molinsp.github.io/datablog/jupyter/2021/02/24/FIFA_analysis_of_best_transactions.html" />
+<meta property="og:site_name" content="Pere’s data blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-24T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://molinsp.github.io/datablog/jupyter/2021/02/24/FIFA_analysis_of_best_transactions.html","@type":"BlogPosting","headline":"Best footbal transactions 2015-2020","dateModified":"2021-02-24T00:00:00-06:00","datePublished":"2021-02-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://molinsp.github.io/datablog/jupyter/2021/02/24/FIFA_analysis_of_best_transactions.html"},"description":"Analyzing player performance to determine the best transactions","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/datablog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://molinsp.github.io/datablog/feed.xml" title="Pere's data blog" /><link rel="shortcut icon" type="image/x-icon" href="/datablog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/datablog/">Pere&#39;s data blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/datablog/about/">About Me</a><a class="page-link" href="/datablog/search/">Search</a><a class="page-link" href="/datablog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Best footbal transactions 2015-2020</h1><p class="page-description">Analyzing player performance to determine the best transactions</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-02-24T00:00:00-06:00" itemprop="datePublished">
+        Feb 24, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/datablog/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/molinsp/datablog/tree/master/_notebooks/2021-02-24-FIFA_analysis_of_best_transactions.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/datablog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/molinsp/datablog/master?filepath=_notebooks%2F2021-02-24-FIFA_analysis_of_best_transactions.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/datablog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/molinsp/datablog/blob/master/_notebooks/2021-02-24-FIFA_analysis_of_best_transactions.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/datablog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Summary">Summary </a></li>
+<li class="toc-entry toc-h1"><a href="#1.-Load-&-prepare-data">1. Load &amp; prepare data </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Load-FIFA-dataset-for-all-years">Load FIFA dataset for all years </a></li>
+<li class="toc-entry toc-h2"><a href="#Load-the-transactions-from-wikipedia">Load the transactions from wikipedia </a></li>
+<li class="toc-entry toc-h2"><a href="#Use-fuzzy-matching-to-connect-the-data">Use fuzzy matching to connect the data </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#2.-Analysis-A:-Performance-improvement-after-transaction">2. Analysis A: Performance improvement after transaction </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Get+2-year-mark">Get+2 year mark </a></li>
+<li class="toc-entry toc-h2"><a href="#Get-yearly-player-score-data">Get yearly player score data </a></li>
+<li class="toc-entry toc-h2"><a href="#Merge-the-yearly-player-score-data-into-the-transactions-table">Merge the yearly player score data into the transactions table </a></li>
+<li class="toc-entry toc-h2"><a href="#Calculate-performance-difference">Calculate performance difference </a></li>
+<li class="toc-entry toc-h2"><a href="#Results">Results </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Analysis-B:-Calculate-performance-in-years-after-purchase">Analysis B: Calculate performance in years after purchase </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Match-the-club-name">Match the club name </a></li>
+<li class="toc-entry toc-h2"><a href="#Get-yearly-performance-&-club-info">Get yearly performance &amp; club info </a></li>
+<li class="toc-entry toc-h2"><a href="#Merge-with-performance">Merge with performance </a></li>
+<li class="toc-entry toc-h2"><a href="#Get-relevant-datapoints-after-the-transactions">Get relevant datapoints after the transactions </a></li>
+<li class="toc-entry toc-h2"><a href="#Final-calculation">Final calculation </a></li>
+<li class="toc-entry toc-h2"><a href="#Result">Result </a></li>
+<li class="toc-entry toc-h2"><a href="#Caveats-and-discussion">Caveats and discussion </a></li>
+</ul>
+</li>
+</ul><body>
+<!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-02-24-FIFA_analysis_of_best_transactions.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Summary">
+<a class="anchor" href="#Summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary<a class="anchor-link" href="#Summary"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following article outlines a methodology to identify the best among the top football transactions between 2015 and 2020.</p>
+<p>Two different methodologies to define "best" are presented and discussed.
+For this exercise, data from the FIFA videogame to evaluate player performance and a list of football transactions by value from Wikipedia are used.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.-Load-&amp;-prepare-data">
+<a class="anchor" href="#1.-Load-&amp;-prepare-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Load &amp; prepare data<a class="anchor-link" href="#1.-Load-&amp;-prepare-data"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Load-FIFA-dataset-for-all-years">
+<a class="anchor" href="#Load-FIFA-dataset-for-all-years" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load FIFA dataset for all years<a class="anchor-link" href="#Load-FIFA-dataset-for-all-years"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Description:</strong> This dataset from the FIFA video game includes an assessment of player skills in several categories and contextual information (club, left vs. right-footed, etc.).</p>
+<p><strong>Source:</strong> <a href="https://www.kaggle.com/stefanoleone992/fifa-20-complete-player-dataset?select=players_19.csv">Kaggle Dataset</a>
+Original data from <a href="https://sofifa.com">sofifa.com</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span> <span class="o">=</span> <span class="n">read_csv_folder</span><span class="p">(</span>
+    <span class="n">folder_path</span><span class="o">=</span><span class="s2">"FIFA_all_years"</span><span class="p">,</span> 
+    <span class="n">file_prefix</span><span class="o">=</span><span class="s2">"players_"</span><span class="p">,</span> 
+    <span class="n">file_col_name</span><span class="o">=</span><span class="s2">"year"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span> <span class="o">=</span> <span class="nb">all</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">"year"</span> <span class="p">:</span> <span class="s2">"int64"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Set full year number</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">all</span><span class="p">[</span><span class="s2">"year"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">all</span><span class="p">[</span><span class="s2">"year"</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">other</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>sofifa_id</th>
+      <th>player_url</th>
+      <th>short_name</th>
+      <th>long_name</th>
+      <th>age</th>
+      <th>dob</th>
+      <th>height_cm</th>
+      <th>weight_kg</th>
+      <th>nationality</th>
+      <th>...</th>
+      <th>lwb</th>
+      <th>ldm</th>
+      <th>cdm</th>
+      <th>rdm</th>
+      <th>rwb</th>
+      <th>lb</th>
+      <th>lcb</th>
+      <th>cb</th>
+      <th>rcb</th>
+      <th>rb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021</td>
+      <td>158023</td>
+      <td>https://sofifa.com/player/158023/lionel-messi/...</td>
+      <td>L. Messi</td>
+      <td>Lionel Andrés Messi Cuccittini</td>
+      <td>33</td>
+      <td>1987-06-24</td>
+      <td>170</td>
+      <td>72</td>
+      <td>Argentina</td>
+      <td>...</td>
+      <td>66+3</td>
+      <td>65+3</td>
+      <td>65+3</td>
+      <td>65+3</td>
+      <td>66+3</td>
+      <td>62+3</td>
+      <td>52+3</td>
+      <td>52+3</td>
+      <td>52+3</td>
+      <td>62+3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021</td>
+      <td>20801</td>
+      <td>https://sofifa.com/player/20801/c-ronaldo-dos-...</td>
+      <td>Cristiano Ronaldo</td>
+      <td>Cristiano Ronaldo dos Santos Aveiro</td>
+      <td>35</td>
+      <td>1985-02-05</td>
+      <td>187</td>
+      <td>83</td>
+      <td>Portugal</td>
+      <td>...</td>
+      <td>65+3</td>
+      <td>61+3</td>
+      <td>61+3</td>
+      <td>61+3</td>
+      <td>65+3</td>
+      <td>61+3</td>
+      <td>54+3</td>
+      <td>54+3</td>
+      <td>54+3</td>
+      <td>61+3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021</td>
+      <td>200389</td>
+      <td>https://sofifa.com/player/200389/jan-oblak/210002</td>
+      <td>J. Oblak</td>
+      <td>Jan Oblak</td>
+      <td>27</td>
+      <td>1993-01-07</td>
+      <td>188</td>
+      <td>87</td>
+      <td>Slovenia</td>
+      <td>...</td>
+      <td>32+3</td>
+      <td>36+3</td>
+      <td>36+3</td>
+      <td>36+3</td>
+      <td>32+3</td>
+      <td>32+3</td>
+      <td>33+3</td>
+      <td>33+3</td>
+      <td>33+3</td>
+      <td>32+3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021</td>
+      <td>188545</td>
+      <td>https://sofifa.com/player/188545/robert-lewand...</td>
+      <td>R. Lewandowski</td>
+      <td>Robert Lewandowski</td>
+      <td>31</td>
+      <td>1988-08-21</td>
+      <td>184</td>
+      <td>80</td>
+      <td>Poland</td>
+      <td>...</td>
+      <td>64+3</td>
+      <td>65+3</td>
+      <td>65+3</td>
+      <td>65+3</td>
+      <td>64+3</td>
+      <td>61+3</td>
+      <td>60+3</td>
+      <td>60+3</td>
+      <td>60+3</td>
+      <td>61+3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021</td>
+      <td>190871</td>
+      <td>https://sofifa.com/player/190871/neymar-da-sil...</td>
+      <td>Neymar Jr</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>28</td>
+      <td>1992-02-05</td>
+      <td>175</td>
+      <td>68</td>
+      <td>Brazil</td>
+      <td>...</td>
+      <td>67+3</td>
+      <td>62+3</td>
+      <td>62+3</td>
+      <td>62+3</td>
+      <td>67+3</td>
+      <td>62+3</td>
+      <td>49+3</td>
+      <td>49+3</td>
+      <td>49+3</td>
+      <td>62+3</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 107 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Load-the-transactions-from-wikipedia">
+<a class="anchor" href="#Load-the-transactions-from-wikipedia" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load the transactions from wikipedia<a class="anchor-link" href="#Load-the-transactions-from-wikipedia"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Description:</strong> This dataset lists the top largest transactions in football</p>
+<p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/List_of_most_expensive_association_football_transfers">Wikipedia Page</a></p>
+<p><strong>Other details:</strong> Scraped using the following tool: <a href="https://wikitable2csv.ggor.de/">wikitable2csv</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">filepath_or_buffer</span><span class="o">=</span><span class="s2">"BigTransactionsWikipedia.csv"</span><span class="p">,</span> 
+    <span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">,</span> 
+    <span class="n">decimal</span><span class="o">=</span><span class="s2">"."</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Keep only relevant columns</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="n">transactions</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">"Player"</span><span class="p">,</span><span class="s2">"From"</span><span class="p">,</span><span class="s2">"To"</span><span class="p">,</span><span class="s2">"Fee(€ mln)"</span><span class="p">,</span><span class="s2">"Year"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Rename fields</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="n">transactions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Fee(€ mln)"</span> <span class="p">:</span> <span class="s2">"fee"</span><span class="p">,</span> <span class="s2">"Year"</span> <span class="p">:</span> <span class="s2">"transaction_year"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Extract numbers from text data</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span><span class="p">[</span><span class="s2">"fee"</span><span class="p">]</span> <span class="o">=</span> <span class="n">transactions</span><span class="p">[</span><span class="s2">"fee"</span><span class="p">]</span><span class="o">.</span><span class="n">fdt</span><span class="o">.</span><span class="n">clean_text_column</span><span class="p">(</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">"custom"</span><span class="p">,</span> 
+    <span class="n">keep_unmatched</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+    <span class="n">regex</span><span class="o">=</span><span class="s2">"(\d+)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span><span class="p">[</span><span class="s2">"transaction_year"</span><span class="p">]</span> <span class="o">=</span> <span class="n">transactions</span><span class="p">[</span><span class="s2">"transaction_year"</span><span class="p">]</span><span class="o">.</span><span class="n">fdt</span><span class="o">.</span><span class="n">clean_text_column</span><span class="p">(</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s2">"custom"</span><span class="p">,</span> 
+    <span class="n">keep_unmatched</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
+    <span class="n">regex</span><span class="o">=</span><span class="s2">"(\d+)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions</span> <span class="o">=</span> <span class="n">transactions</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">"transaction_year"</span> <span class="p">:</span> <span class="s2">"int64"</span><span class="p">,</span>
+            <span class="s2">"fee"</span><span class="p">:</span> <span class="s2">"int64"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kylian Mbappé</td>
+      <td>Monaco</td>
+      <td>Paris Saint-Germain</td>
+      <td>180</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Philippe Coutinho</td>
+      <td>Liverpool</td>
+      <td>Barcelona</td>
+      <td>145</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>João Félix</td>
+      <td>Benfica</td>
+      <td>Atlético Madrid</td>
+      <td>126</td>
+      <td>2019</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antoine Griezmann</td>
+      <td>Atlético Madrid</td>
+      <td>Barcelona</td>
+      <td>120</td>
+      <td>2019</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Use-fuzzy-matching-to-connect-the-data">
+<a class="anchor" href="#Use-fuzzy-matching-to-connect-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use fuzzy matching to connect the data<a class="anchor-link" href="#Use-fuzzy-matching-to-connect-the-data"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The player names of the FIFA and the Wikipedia dataset do not match. For example, FIFA dataset uses <code>Neymar da Silva Santos Júnior</code> and the Wikipedia transaction dataset <code>Neymar</code>. To match the names that refer to the same player, fuzzy matching is used (using a library that leverages the concept of <a href="https://en.wikipedia.org/wiki/Levenshtein_distance#:~:text=Informally%2C%20the%20Levenshtein%20distance%20between,considered%20this%20distance%20in%201965.">levenstein distance</a>).</p>
+<p>To do that, we first get the unique names from the FIFA dataset in a separate dataframe.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player_names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'fifa_name'</span> <span class="p">:</span> <span class="nb">all</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()})</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pefrom fuzzy matching using a threshold of 60 (after a bit of trial and error)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">fuzzy_merge</span><span class="p">(</span><span class="n">transactions</span><span class="p">,</span>
+    <span class="n">right</span><span class="o">=</span><span class="n">player_names</span><span class="p">,</span> 
+    <span class="n">left_on</span><span class="o">=</span><span class="s2">"Player"</span><span class="p">,</span> 
+    <span class="n">right_on</span><span class="o">=</span><span class="s2">"fifa_name"</span><span class="p">,</span> 
+    <span class="n">threshold</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> 
+    <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Transaction data with the FIFA name in a column called <code>matches</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+      <th>matches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kylian Mbappé</td>
+      <td>Monaco</td>
+      <td>Paris Saint-Germain</td>
+      <td>180</td>
+      <td>2018</td>
+      <td>Kylian Mbappé Lottin</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Philippe Coutinho</td>
+      <td>Liverpool</td>
+      <td>Barcelona</td>
+      <td>145</td>
+      <td>2018</td>
+      <td>Philippe Coutinho Correia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>João Félix</td>
+      <td>Benfica</td>
+      <td>Atlético Madrid</td>
+      <td>126</td>
+      <td>2019</td>
+      <td>João Félix Sequeira</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antoine Griezmann</td>
+      <td>Atlético Madrid</td>
+      <td>Barcelona</td>
+      <td>120</td>
+      <td>2019</td>
+      <td>Antoine Griezmann</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-Analysis-A:-Performance-improvement-after-transaction">
+<a class="anchor" href="#2.-Analysis-A:-Performance-improvement-after-transaction" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Analysis A: Performance improvement after transaction<a class="anchor-link" href="#2.-Analysis-A:-Performance-improvement-after-transaction"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Assuming that the transactions were completed at a fair market value and future improvements were not priced in, the players' score improvement can be used to rank the transactions.</p>
+<p><code>score change = #score 2 years after transaction - #score transaction year</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get+2-year-mark">
+<a class="anchor" href="#Get+2-year-mark" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get+2 year mark<a class="anchor-link" href="#Get+2-year-mark"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Create +2y mark</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span><span class="p">[</span><span class="s2">"+2y"</span><span class="p">]</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="p">[</span><span class="s2">"transaction_year"</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+    <span class="n">other</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-yearly-player-score-data">
+<a class="anchor" href="#Get-yearly-player-score-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get yearly player score data<a class="anchor-link" href="#Get-yearly-player-score-data"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Get scores per year</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">year_scores</span> <span class="o">=</span> <span class="nb">all</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"long_name"</span><span class="p">,</span><span class="s2">"overall"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">year_scores</span> <span class="o">=</span> <span class="n">year_scores</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span> <span class="s2">"long_name"</span> <span class="p">:</span> <span class="s2">"fifa_name"</span><span class="p">,</span> <span class="s2">"overall"</span> <span class="p">:</span> <span class="s2">"score"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>fifa_name</th>
+      <th>score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021</td>
+      <td>Lionel Andrés Messi Cuccittini</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021</td>
+      <td>Cristiano Ronaldo dos Santos Aveiro</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021</td>
+      <td>Jan Oblak</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021</td>
+      <td>Robert Lewandowski</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>91</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Rename the matched column as <code>fifa_name</code> for easier matching</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span> <span class="s2">"matches"</span> <span class="p">:</span> <span class="s2">"fifa_name"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Merge-the-yearly-player-score-data-into-the-transactions-table">
+<a class="anchor" href="#Merge-the-yearly-player-score-data-into-the-transactions-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merge the yearly player score data into the transactions table<a class="anchor-link" href="#Merge-the-yearly-player-score-data-into-the-transactions-table"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Join with the score of the year of the transaction</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">right</span><span class="o">=</span><span class="n">year_scores</span><span class="p">,</span> 
+    <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> 
+    <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"transaction_year"</span><span class="p">,</span><span class="s2">"fifa_name"</span><span class="p">],</span> 
+    <span class="n">right_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"fifa_name"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"year"</span> <span class="p">:</span> <span class="s2">"year0"</span><span class="p">,</span>
+             <span class="s2">"score"</span><span class="p">:</span> <span class="s2">"score_transaction_year"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Join with the score of 2 years after the transaction</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">right</span><span class="o">=</span><span class="n">year_scores</span><span class="p">,</span> 
+    <span class="n">how</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">,</span> 
+    <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"+2y"</span><span class="p">,</span><span class="s2">"fifa_name"</span><span class="p">],</span> 
+    <span class="n">right_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"fifa_name"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"score"</span> <span class="p">:</span> <span class="s2">"score_+2y"</span><span class="p">,</span>
+             <span class="s2">"score"</span><span class="p">:</span> <span class="s2">"score_+2y"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have the scores at the year of the transaction and two years later</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+      <th>fifa_name</th>
+      <th>+2y</th>
+      <th>year0</th>
+      <th>score_transaction_year</th>
+      <th>year</th>
+      <th>score_+2y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>2017.0</td>
+      <td>92.0</td>
+      <td>2019</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kylian Mbappé</td>
+      <td>Monaco</td>
+      <td>Paris Saint-Germain</td>
+      <td>180</td>
+      <td>2018</td>
+      <td>Kylian Mbappé Lottin</td>
+      <td>2020</td>
+      <td>2018.0</td>
+      <td>83.0</td>
+      <td>2020</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Philippe Coutinho</td>
+      <td>Liverpool</td>
+      <td>Barcelona</td>
+      <td>145</td>
+      <td>2018</td>
+      <td>Philippe Coutinho Correia</td>
+      <td>2020</td>
+      <td>2018.0</td>
+      <td>86.0</td>
+      <td>2020</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>João Félix</td>
+      <td>Benfica</td>
+      <td>Atlético Madrid</td>
+      <td>126</td>
+      <td>2019</td>
+      <td>João Félix Sequeira</td>
+      <td>2021</td>
+      <td>2019.0</td>
+      <td>69.0</td>
+      <td>2021</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antoine Griezmann</td>
+      <td>Atlético Madrid</td>
+      <td>Barcelona</td>
+      <td>120</td>
+      <td>2019</td>
+      <td>Antoine Griezmann</td>
+      <td>2021</td>
+      <td>2019.0</td>
+      <td>89.0</td>
+      <td>2021</td>
+      <td>87</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Calculate-performance-difference">
+<a class="anchor" href="#Calculate-performance-difference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculate performance difference<a class="anchor-link" href="#Calculate-performance-difference"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span>
+    <span class="n">axis</span><span class="o">=</span><span class="s2">"index"</span><span class="p">,</span> 
+    <span class="n">how</span><span class="o">=</span><span class="s2">"any"</span><span class="p">,</span> 
+    <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"score_transaction_year"</span><span class="p">,</span><span class="s2">"score_+2y"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span><span class="p">[</span><span class="s2">"score_delta"</span><span class="p">]</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="p">[</span><span class="s2">"score_+2y"</span><span class="p">]</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span>
+    <span class="n">other</span><span class="o">=</span><span class="n">transactions_with_scores</span><span class="p">[</span><span class="s2">"score_transaction_year"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+    <span class="n">by</span><span class="o">=</span><span class="s2">"score_delta"</span><span class="p">,</span> 
+    <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span><span class="p">[</span><span class="s1">'transaction name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="p">[</span><span class="s1">'Player'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'-'</span> <span class="o">+</span> <span class="n">transactions_with_scores</span><span class="p">[</span><span class="s1">'transaction_year'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+      <th>fifa_name</th>
+      <th>+2y</th>
+      <th>year0</th>
+      <th>score_transaction_year</th>
+      <th>year</th>
+      <th>score_+2y</th>
+      <th>score_delta</th>
+      <th>transaction name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>João Félix</td>
+      <td>Benfica</td>
+      <td>Atlético Madrid</td>
+      <td>126</td>
+      <td>2019</td>
+      <td>João Félix Sequeira</td>
+      <td>2021</td>
+      <td>2019.0</td>
+      <td>69.0</td>
+      <td>2021</td>
+      <td>81</td>
+      <td>12.0</td>
+      <td>João Félix-2019</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Alisson</td>
+      <td>Roma</td>
+      <td>Liverpool</td>
+      <td>62</td>
+      <td>2018</td>
+      <td>Alisson Ramsés Becker</td>
+      <td>2020</td>
+      <td>2018.0</td>
+      <td>80.0</td>
+      <td>2020</td>
+      <td>89</td>
+      <td>9.0</td>
+      <td>Alisson-2018</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Frenkie de Jong</td>
+      <td>Ajax</td>
+      <td>Barcelona</td>
+      <td>75</td>
+      <td>2019</td>
+      <td>Frenkie de Jong</td>
+      <td>2021</td>
+      <td>2019.0</td>
+      <td>77.0</td>
+      <td>2021</td>
+      <td>85</td>
+      <td>8.0</td>
+      <td>Frenkie de Jong-2019</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Virgil van Dijk</td>
+      <td>Southampton</td>
+      <td>Liverpool</td>
+      <td>84</td>
+      <td>2018</td>
+      <td>Virgil van Dijk</td>
+      <td>2020</td>
+      <td>2018.0</td>
+      <td>83.0</td>
+      <td>2020</td>
+      <td>90</td>
+      <td>7.0</td>
+      <td>Virgil van Dijk-2018</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Kevin De Bruyne</td>
+      <td>VfL Wolfsburg</td>
+      <td>Manchester City</td>
+      <td>75</td>
+      <td>2015</td>
+      <td>Kevin De Bruyne</td>
+      <td>2017</td>
+      <td>2015.0</td>
+      <td>81.0</td>
+      <td>2017</td>
+      <td>88</td>
+      <td>7.0</td>
+      <td>Kevin De Bruyne-2015</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Results">
+<a class="anchor" href="#Results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results<a class="anchor-link" href="#Results"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Assuming that transactions where completed at a <strong>fair market value</strong>, the score improvement of the players is a metric that can give us an idea of what has been the best transaction.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">transactions_with_scores</span> <span class="o">=</span> <span class="n">transactions_with_scores</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+    <span class="n">by</span><span class="o">=</span><span class="s2">"score_delta"</span><span class="p">,</span> 
+    <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>According to this metric, Atlético de Madrid's purchase of João Félix's in 2019 was the best performing transaction (score change from 69 to 81), followed by Liverpool's purchase of Alisson in 2018 (score change from 80 to 89).</p>
+<p>The least performing transactions according to this metric were Real Madrid's purchase of Eden Hazard (score change from 91 to 88), Barça's Griezmann (score change from 89 to 87) and Inter's Lukaku (score change from 87 to 85).</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">transactions_with_scores</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">"seaborn"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">"transaction name"</span><span class="p">,</span> 
+    <span class="n">x</span><span class="o">=</span><span class="s2">"score_delta"</span><span class="p">,</span> 
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Score increase after a given transaction"</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">"score_delta"</span> <span class="p">:</span> <span class="s2">"Δ fifa score after 2 yers"</span><span class="p">},</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">include_plotlyjs</span><span class="o">=</span><span class="s1">'cdn'</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<meta charset="utf-8">
+
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>                <div id="c097c53c-2a66-4660-acc4-90a44cbe3c29" class="plotly-graph-div" style="height:1000px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c097c53c-2a66-4660-acc4-90a44cbe3c29")) {                    Plotly.newPlot(                        "c097c53c-2a66-4660-acc4-90a44cbe3c29",                        [{"alignmentgroup": "True", "hovertemplate": "\u0394 fifa score after 2 yers=%{x}<br>transaction name=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "rgb(76,114,176)"}, "name": "", "offsetgroup": "", "orientation": "h", "showlegend": false, "textposition": "auto", "type": "bar", "x": [-3.0, -2.0, -2.0, -1.0, -1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 4.0, 5.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 7.0, 8.0, 9.0, 12.0], "xaxis": "x", "y": ["Eden Hazard-2019", "Antoine Griezmann-2019", "Romelu Lukaku-2019", "Naby Ke\u00efta-2018", "Oscar-2017", "Cristiano Ronaldo-2018", "Philippe Coutinho-2018", "Harry Maguire-2019", "Lucas Hernandez-2019", "Neymar-2017", "Pierre-Emerick Aubameyang-2018", "Thomas Lemar-2018", "\u00c1lvaro Morata-2017", "Riyad Mahrez-2018", "Paul Pogba-2016", "\u00c1ngel Di Mar\u00eda-2015", "Jo\u00e3o Cancelo-2019", "Tanguy Ndombele-2019", "Raheem Sterling-2015", "Christian Pulisic-2019", "Rodri-2019", "Aymeric Laporte-2018", "Romelu Lukaku-2017", "Kepa Arrizabalaga-2018", "Luka Jovi\u0107-2019", "Ousmane Demb\u00e9l\u00e9-2017", "Matthijs de Ligt-2019", "Gonzalo Higua\u00edn-2016", "Kylian Mbapp\u00e9-2018", "Nicolas P\u00e9p\u00e9-2019", "Kevin De Bruyne-2015", "Virgil van Dijk-2018", "Frenkie de Jong-2019", "Alisson-2018", "Jo\u00e3o F\u00e9lix-2019"], "yaxis": "y"}],                        {"barmode": "relative", "height": 1000, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "rgb(234,234,242)", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "rgb(234,234,242)", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(231,231,240)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(183,183,191)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "rgb(67,103,167)"}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"sequential": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "sequentialminus": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]]}, "colorway": ["rgb(76,114,176)", "rgb(221,132,82)", "rgb(85,168,104)", "rgb(196,78,82)", "rgb(129,114,179)", "rgb(147,120,96)", "rgb(218,139,195)", "rgb(140,140,140)", "rgb(204,185,116)", "rgb(100,181,205)"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "rgb(234,234,242)", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "paper_bgcolor": "white", "plot_bgcolor": "rgb(234,234,242)", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "bgcolor": "rgb(234,234,242)", "radialaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"fillcolor": "rgb(67,103,167)", "line": {"width": 0}, "opacity": 0.5}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "bgcolor": "rgb(234,234,242)", "caxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white"}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white"}}}, "title": {"text": "Score increase after a given transaction"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "\u0394 fifa score after 2 yers"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "transaction name"}}},                        {"responsive": true}                    )                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-B:-Calculate-performance-in-years-after-purchase">
+<a class="anchor" href="#Analysis-B:-Calculate-performance-in-years-after-purchase" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis B: Calculate performance in years after purchase<a class="anchor-link" href="#Analysis-B:-Calculate-performance-in-years-after-purchase"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given <a href="https://en.wikipedia.org/wiki/Behavioral_economics#:~:text=Behavioral%20economics%20(also%2C%20behavioural%20economics,implied%20by%20classical%20economic%20theory.">countless evidence of how irrational humans are</a>, it's fair to assume that the purchase price is not always a reasonable market price.</p>
+<p>In that case, how could one determine the best deals?
+One potential metric is value delivery for money invested. Notice this is not only your classical value for money, given value is not a static parameter here, and it changes every year.</p>
+<p><code>avg. value delivered = SUM(value) for each year after purchase / #year</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Match-the-club-name">
+<a class="anchor" href="#Match-the-club-name" aria-hidden="true"><span class="octicon octicon-link"></span></a>Match the club name<a class="anchor-link" href="#Match-the-club-name"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To get the performance of the players before joining a club, we need to again have the same values in the club column, i.e. match <code>Barcelona</code> with <code>FC Barcelona</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clubs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'club_name'</span> <span class="p">:</span> <span class="nb">all</span><span class="p">[</span><span class="s1">'club_name'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()})</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Match the name of the buyer club as it is in the FIFA in a new column</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">fuzzy_merge</span><span class="p">(</span><span class="n">matched_transactions</span><span class="p">,</span> <span class="n">clubs</span><span class="p">,</span> <span class="s1">'To'</span><span class="p">,</span> <span class="s1">'club_name'</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"matches"</span> <span class="p">:</span> <span class="s2">"buyer_club"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+      <th>fifa_name</th>
+      <th>+2y</th>
+      <th>buyer_club</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kylian Mbappé</td>
+      <td>Monaco</td>
+      <td>Paris Saint-Germain</td>
+      <td>180</td>
+      <td>2018</td>
+      <td>Kylian Mbappé Lottin</td>
+      <td>2020</td>
+      <td>Paris Saint-Germain</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Philippe Coutinho</td>
+      <td>Liverpool</td>
+      <td>Barcelona</td>
+      <td>145</td>
+      <td>2018</td>
+      <td>Philippe Coutinho Correia</td>
+      <td>2020</td>
+      <td>FC Barcelona</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>João Félix</td>
+      <td>Benfica</td>
+      <td>Atlético Madrid</td>
+      <td>126</td>
+      <td>2019</td>
+      <td>João Félix Sequeira</td>
+      <td>2021</td>
+      <td>Atlético Madrid</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antoine Griezmann</td>
+      <td>Atlético Madrid</td>
+      <td>Barcelona</td>
+      <td>120</td>
+      <td>2019</td>
+      <td>Antoine Griezmann</td>
+      <td>2021</td>
+      <td>FC Barcelona</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-yearly-performance-&amp;-club-info">
+<a class="anchor" href="#Get-yearly-performance-&amp;-club-info" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get yearly performance &amp; club info<a class="anchor-link" href="#Get-yearly-performance-&amp;-club-info"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">performance_time_club</span> <span class="o">=</span> <span class="nb">all</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s2">"year"</span><span class="p">,</span><span class="s2">"long_name"</span><span class="p">,</span><span class="s2">"overall"</span><span class="p">,</span><span class="s2">"club_name"</span><span class="p">,</span><span class="s2">"value_eur"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">performance_time_club</span> <span class="o">=</span> <span class="n">performance_time_club</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"year"</span> <span class="p">:</span> <span class="s2">"score_year"</span><span class="p">,</span> <span class="s2">"long_name"</span> <span class="p">:</span> <span class="s2">"fifa_name"</span><span class="p">,</span> <span class="s2">"overall"</span> <span class="p">:</span> <span class="s2">"score"</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>score_year</th>
+      <th>fifa_name</th>
+      <th>score</th>
+      <th>club_name</th>
+      <th>value_eur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021</td>
+      <td>Lionel Andrés Messi Cuccittini</td>
+      <td>93</td>
+      <td>FC Barcelona</td>
+      <td>67500000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021</td>
+      <td>Cristiano Ronaldo dos Santos Aveiro</td>
+      <td>92</td>
+      <td>Juventus</td>
+      <td>46000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021</td>
+      <td>Jan Oblak</td>
+      <td>91</td>
+      <td>Atlético Madrid</td>
+      <td>75000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021</td>
+      <td>Robert Lewandowski</td>
+      <td>91</td>
+      <td>FC Bayern München</td>
+      <td>80000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>91</td>
+      <td>Paris Saint-Germain</td>
+      <td>90000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Merge-with-performance">
+<a class="anchor" href="#Merge-with-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merge with performance<a class="anchor-link" href="#Merge-with-performance"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For each of the transactions, get all the performance rows for the same player</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">right</span><span class="o">=</span><span class="n">performance_time_club</span><span class="p">,</span> 
+    <span class="n">how</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">,</span> 
+    <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"fifa_name"</span><span class="p">],</span> 
+    <span class="n">right_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"fifa_name"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>From</th>
+      <th>To</th>
+      <th>fee</th>
+      <th>transaction_year</th>
+      <th>fifa_name</th>
+      <th>+2y</th>
+      <th>buyer_club</th>
+      <th>score_year</th>
+      <th>score</th>
+      <th>club_name</th>
+      <th>value_eur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+      <td>2021</td>
+      <td>91</td>
+      <td>Paris Saint-Germain</td>
+      <td>90000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+      <td>2020</td>
+      <td>92</td>
+      <td>Paris Saint-Germain</td>
+      <td>105500000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+      <td>2018</td>
+      <td>92</td>
+      <td>Paris Saint-Germain</td>
+      <td>123000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+      <td>2019</td>
+      <td>92</td>
+      <td>Paris Saint-Germain</td>
+      <td>118500000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Neymar</td>
+      <td>Barcelona</td>
+      <td>Paris Saint-Germain</td>
+      <td>222</td>
+      <td>2017</td>
+      <td>Neymar da Silva Santos Júnior</td>
+      <td>2019</td>
+      <td>Paris Saint-Germain</td>
+      <td>2017</td>
+      <td>92</td>
+      <td>FC Barcelona</td>
+      <td>109000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-relevant-datapoints-after-the-transactions">
+<a class="anchor" href="#Get-relevant-datapoints-after-the-transactions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get relevant datapoints after the transactions<a class="anchor-link" href="#Get-relevant-datapoints-after-the-transactions"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Keep only the performance for the years <strong>after a transaction</strong>, i.e. the value delivered to the buying club</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"transaction_year&gt;=2015"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span><span class="p">[</span><span class="s1">'afer_purchase'</span><span class="p">]</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s2">"buyer_club==club_name &amp; score_year &gt;= transaction_year"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"afer_purchase==True"</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"python"</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matched_transactions</span><span class="p">[</span><span class="s1">'transaction name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="p">[</span><span class="s1">'Player'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'-'</span> <span class="o">+</span> <span class="n">matched_transactions</span><span class="p">[</span><span class="s1">'transaction_year'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Final-calculation">
+<a class="anchor" href="#Final-calculation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final calculation<a class="anchor-link" href="#Final-calculation"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">perf_after_transaction</span> <span class="o">=</span> <span class="n">matched_transactions</span><span class="o">.</span><span class="n">fdt</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">"transaction name"</span><span class="p">,</span><span class="s2">"transaction_year"</span><span class="p">,</span><span class="s2">"fee"</span><span class="p">],</span> 
+    <span class="n">index_type</span><span class="o">=</span><span class="s2">"flat"</span><span class="p">,</span> 
+    <span class="n">aggfunc</span><span class="o">=</span><span class="p">{</span><span class="s2">"score"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"sum"</span><span class="p">,</span><span class="s2">"size"</span><span class="p">]})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'avg_performance'</span><span class="p">]</span> <span class="o">=</span> <span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'score_sum'</span><span class="p">]</span><span class="o">/</span><span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'score_size'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'perf_per_eur'</span><span class="p">]</span> <span class="o">=</span> <span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'avg_performance'</span><span class="p">]</span> <span class="o">/</span> <span class="n">perf_after_transaction</span><span class="p">[</span><span class="s1">'fee'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Result">
+<a class="anchor" href="#Result" aria-hidden="true"><span class="octicon octicon-link"></span></a>Result<a class="anchor-link" href="#Result"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sort data</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">perf_after_transaction</span> <span class="o">=</span> <span class="n">perf_after_transaction</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+    <span class="n">by</span><span class="o">=</span><span class="s2">"perf_per_eur"</span><span class="p">,</span> 
+    <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is not uncommon for companies to try several "models" of the world. One of the reasons is to be able to capture different nuances and perspectives.</p>
+<p>Sometimes, different models agree, and in this case, we see the purchase of Alisson by Liverpool in 2018 as a very well-performing transaction. But João Félix Sequeira, which we previously saw as the best transaction, did not perform that well under this metric, which helps us understand it was a good but expensive deal.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<meta charset="utf-8">
+
+    <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>                <div id="d0d1092a-4d42-4360-b134-3faa40a450fd" class="plotly-graph-div" style="height:1000px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("d0d1092a-4d42-4360-b134-3faa40a450fd")) {                    Plotly.newPlot(                        "d0d1092a-4d42-4360-b134-3faa40a450fd",                        [{"alignmentgroup": "True", "hovertemplate": "performance points [0-100] per mn. \u20ac=%{x}<br>transaction name=%{y}<extra></extra>", "legendgroup": "", "marker": {"color": "rgb(76,114,176)"}, "name": "", "offsetgroup": "", "orientation": "h", "showlegend": false, "textposition": "auto", "type": "bar", "x": [0.4132882882882883, 0.4847222222222222, 0.5896551724137931, 0.6388888888888888, 0.7333333333333333, 0.7904761904761904, 0.8323809523809524, 0.895, 0.93, 0.9425287356321839, 0.9740740740740741, 1.0176470588235293, 1.03125, 1.0375, 1.0375, 1.0515873015873016, 1.0625, 1.103896103896104, 1.1285714285714286, 1.1333333333333333, 1.1333333333333333, 1.1666666666666667, 1.1761904761904762, 1.191111111111111, 1.2142857142857142, 1.25, 1.263681592039801, 1.2846153846153847, 1.2846153846153847, 1.317948717948718, 1.3385416666666667, 1.3416666666666666, 1.3551912568306013, 1.3583333333333334, 1.3629032258064515, 1.3666666666666667, 1.3862433862433863, 1.4166666666666667, 1.4193548387096775], "xaxis": "x", "y": ["Neymar-2017", "Kylian Mbapp\u00e9-2018", "Philippe Coutinho-2018", "Jo\u00e3o F\u00e9lix-2019", "Antoine Griezmann-2019", "Ousmane Demb\u00e9l\u00e9-2017", "Paul Pogba-2016", "Eden Hazard-2019", "Cristiano Ronaldo-2018", "Harry Maguire-2019", "Gonzalo Higua\u00edn-2016", "Romelu Lukaku-2017", "Nicolas P\u00e9p\u00e9-2019", "Lucas Hernandez-2019", "Kepa Arrizabalaga-2018", "Virgil van Dijk-2018", "Romelu Lukaku-2019", "Kai Havertz-2020", "Victor Osimhen-2020", "Matthijs de Ligt-2019", "Frenkie de Jong-2019", "Arthur-2020", "Thomas Lemar-2018", "Kevin De Bruyne-2015", "Rodri-2019", "Christian Pulisic-2019", "Riyad Mahrez-2018", "Jo\u00e3o Cancelo-2019", "\u00c1lvaro Morata-2017", "Aymeric Laporte-2018", "\u00c1ngel Di Mar\u00eda-2015", "Tanguy Ndombele-2019", "Oscar-2017", "Luka Jovi\u0107-2019", "Raheem Sterling-2015", "Naby Ke\u00efta-2018", "Pierre-Emerick Aubameyang-2018", "Miralem Pjani\u0107-2020", "Alisson-2018"], "yaxis": "y"}],                        {"barmode": "relative", "height": 1000, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "rgb(234,234,242)", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "rgb(234,234,242)", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(231,231,240)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(183,183,191)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "rgb(67,103,167)"}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"sequential": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]], "sequentialminus": [[0.0, "rgb(2,4,25)"], [0.06274509803921569, "rgb(24,15,41)"], [0.12549019607843137, "rgb(47,23,57)"], [0.18823529411764706, "rgb(71,28,72)"], [0.25098039215686274, "rgb(97,30,82)"], [0.3137254901960784, "rgb(123,30,89)"], [0.3764705882352941, "rgb(150,27,91)"], [0.4392156862745098, "rgb(177,22,88)"], [0.5019607843137255, "rgb(203,26,79)"], [0.5647058823529412, "rgb(223,47,67)"], [0.6274509803921569, "rgb(236,76,61)"], [0.6901960784313725, "rgb(242,107,73)"], [0.7529411764705882, "rgb(244,135,95)"], [0.8156862745098039, "rgb(245,162,122)"], [0.8784313725490196, "rgb(246,188,153)"], [0.9411764705882353, "rgb(247,212,187)"], [1.0, "rgb(250,234,220)"]]}, "colorway": ["rgb(76,114,176)", "rgb(221,132,82)", "rgb(85,168,104)", "rgb(196,78,82)", "rgb(129,114,179)", "rgb(147,120,96)", "rgb(218,139,195)", "rgb(140,140,140)", "rgb(204,185,116)", "rgb(100,181,205)"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "rgb(234,234,242)", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "paper_bgcolor": "white", "plot_bgcolor": "rgb(234,234,242)", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "bgcolor": "rgb(234,234,242)", "radialaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "rgb(234,234,242)", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "showgrid": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"fillcolor": "rgb(67,103,167)", "line": {"width": 0}, "opacity": 0.5}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}, "bgcolor": "rgb(234,234,242)", "caxis": {"gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": ""}}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white"}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "showgrid": true, "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white"}}}, "title": {"text": "Value for money in top transactions"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "performance points [0-100] per mn. \u20ac"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "transaction name"}}},                        {"responsive": true}                    )                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Caveats-and-discussion">
+<a class="anchor" href="#Caveats-and-discussion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Caveats and discussion<a class="anchor-link" href="#Caveats-and-discussion"> </a>
+</h2>
+<p>While some players stay in the new club for several years, others may be transferred after just a couple of seasons. To control for this, we need to normalize by the number of years the player stays.</p>
+<p>An even better metric would be the net price per total performance delivered. This metric would consider the net price, i.e., the value of the purchase minus the sale value. But given the restricted time range of the dataset (2015-2021), we have very little data about actual sales at market values and thus decided not to pursue this analysis.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+  </div><a class="u-url" href="/datablog/jupyter/2021/02/24/FIFA_analysis_of_best_transactions.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/datablog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/datablog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/datablog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A collection of stories told with data.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/molinsp" title="molinsp"><svg class="svg-icon grey"><use xlink:href="/datablog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/molins_p" title="molins_p"><svg class="svg-icon grey"><use xlink:href="/datablog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
