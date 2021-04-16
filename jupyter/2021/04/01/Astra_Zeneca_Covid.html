@@ -257,7 +257,7 @@ window.onload = wrap_img;
 <p></p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>The incidence rate is a measure of the frequency with which a disease or other incident occurs over a specified time period. <a href="https://en.wikipedia.org/wiki/Incidence_(epidemiology">Source</a>#:~:text=In%20the%20same%20example%20as,number%20of%20years%20(two).)
+    <strong>Note: </strong>The incidence rate is a measure of the frequency with which a disease or other incident occurs over a specified time period. <a href="https://en.wikipedia.org/wiki/Incidence_(epidemiology">Source</a>)
 </div>
 
 </div>
@@ -309,7 +309,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When performing the OE analysis, we see that for age groups below 50, there are more expected cases than observed cases (red bar is larger than blue bar), <strong>and therefore it is clear there is no risk</strong>.</p>
+<p>When performing the OE analysis, we see that for age groups above 50, there are more expected cases than observed cases (blue bar is larger than red bar), <strong>and therefore it is clear there is no risk</strong>.</p>
 
 </div>
 </div>
@@ -345,10 +345,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But for ages below 50, there are more observed cases than expected.</p>
-<p>Let's run through one example to understand this better:</p>
-<p>In the case of 30-49, we expect 2 cases but get 4. This means the ratio of observed to expected is about 2, i.e., we get more instances of DIC than we expect. But the confidence interval tells us that in 95% of cases, the number of observed will fall between 0.54 and 5.16. Because our OE ratio is 2, we can't confidently conclude that the vaccine leads to more DIC cases. If the number were &gt;5, it means it is a number that is very unlikely to occur by chance (outside 95% of cases) and thus worrisome.</p>
-<p>To understand this, you can think of flipping a coin. On average, you get 50% heads, but within a hundred coin flip, you could get more heads or more tails. The question we ask is similar to trying to understand if a coin has been tampered with based on the number of heads you obtained in 100 coin flips. If the number of coin flips is above the 95% CI, you would know it is very unlikely to get that result by chance, and thus there is a strong signal that the coin has been tampered with.</p>
+<p>But for ages below 50, there are more observed cases than expected. Let's run through one example to understand this better:</p>
+<p>In the case of 30-49, we expect 2 cases but get 4. This means the ratio of observed to expected is about 2, i.e., we get more instances of DIC than we expect. But the confidence interval tells us that in 95% of cases, the number of observed will fall between 0.54 and 5.16.</p>
 
 </div>
 </div>
@@ -381,6 +379,15 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Because the OE ratio is 2, we can't confidently conclude that the vaccine leads to more DIC cases. If the number was &gt;5, it would mean it is very unlikely to get that number of cases by chance (outside 95% of cases) and thus worrisome.</p>
+<p>To understand this, you can think of flipping a coin. On average, you get 50% heads, but within a hundred coin flip, you could get more heads or more tails. The question we ask is similar to trying to understand if a coin has been tampered with based on the number of heads you obtained in 100 coin flips. If the number of coin flips is above the 95% CI, you would know it is very unlikely to get that result by chance, and thus there is a strong signal that the coin has been tampered with.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -447,7 +454,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And as was the case before, we see that the OE ratio falls within the 95% confidence interval.</p>
+<p>And as was the case before, we see that the OE ratio for ages below under 50 lies within the 95% confidence interval.</p>
 
 </div>
 </div>
@@ -537,7 +544,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But as seen before, we see that the value of observed to expected falls within the 95% interval.</p>
+<p>And as was the case before, we see that the OE ratio for ages below under 50 lies within the 95% confidence interval.</p>
 
 </div>
 </div>
@@ -582,7 +589,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can conclude that there is no evidence that the Astra Zeneca vaccine leads to adverse conditions, despite the fact that we are getting OE &gt; 1 for populations under 50. But it's important not to confuse absence of evidence with evidence of absence. What this means is that while we can't prove there is a link, we can't disprove it either, and the link may still exist. From a risk perspective, the risk is not zero.</p>
+<p>We can conclude that there is no strong evidence that the Astra Zeneca vaccine leads to adverse conditions, despite the fact that we are getting OE &gt; 1 for populations under 50. But it's important not to confuse absence of evidence with evidence of absence. What this means is that while we can't prove there is a link, we can't disprove it either, and the link may still exist. From a risk perspective, the risk is not zero.</p>
 <p>But not taking a vaccine also has a risk: a quarter of people who end up in intensive care with Covid have some form of clot resulting from the virus (<a href="https://www.bbc.com/news/explainers-56665396">Source</a>). The vaccine is objectively saving hundreds of thousands of lives at the moment, and that is why, after clinical trials passed, the burden of proof falls into proving it is not safe and not the other way around.</p>
 <p>You can think of this logic as analogous to the presumption of innocence. While we may risk having guilty people running around in our society, the risk of a totalitarian state where this is not required is greater.
 So for the moment, the Astra Zeneca Covid-19 vaccine is innocent until proven otherwise.</p>
