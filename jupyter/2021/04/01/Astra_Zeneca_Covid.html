@@ -194,7 +194,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The EMA report performs some observed to expected analysis (OE) in the report to understand the vaccine's potential risks. We will focus on the study of EudraVigilance data (page 17, section 3.1.5 in the report), which looks at three potential categories of side-effects present in the database:</p>
+<p>The EMA report performs some observed to expected analysis (OE) to understand the vaccine's potential risks. We will focus on the study of EudraVigilance data (page 17, section 3.1.5 in the report), which looks at three potential categories of side-effects present in the database:</p>
 <ul>
 <li>Disseminated intravascular coagulation</li>
 <li>Cerebral Venous Sinus Thrombosis</li>
@@ -222,7 +222,7 @@ window.onload = wrap_img;
 <h3 id="Expected-to-observed-analysis">
 <a class="anchor" href="#Expected-to-observed-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected to observed analysis<a class="anchor-link" href="#Expected-to-observed-analysis"> </a>
 </h3>
-<p>This type of analysis compares how many cases of a given condition or side-effect have been observed (observed) with the number of cases one would expect based on historical incidence data (expected). It is is defined as a ratio in the following way: <code># of observed cases / # expected cases</code>. If it is larger than 1, you are getting more cases than you "theoretically should."</p>
+<p>This type of analysis compares how many cases of a given condition or side-effect have been observed (observed) with the number of cases one would expect based on the incidence, i.e., the historical number of cases (expected). It is defined as a ratio in the following way: <code># of observed cases / # expected cases</code>. If it is larger than 1, you are getting more cases than you "theoretically should."</p>
 <p><strong>But statistical uncertainty will often be driven by the observed number of cases, which is often small</strong> (rare events). To deal with this statistical uncertainty around the total number of cases observed over the risk period of interest, a 95% confidence interval (often indicated as <code>95%CI</code>) is often used (more on this later).</p>
 
 </div>
@@ -240,8 +240,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A key input for the analysis is the <strong>incidence rate</strong> of the side-effect. It is required to be able to determine the expected cases. It is also important to have data stratified by groups to be able to understand effects for individual subgroups and not just the overall population. That is because the OE ratio can be &lt;1 for the overall population but out of proportion for individual subgroups who are more at risk (e.g., young people, people with certain pre-conditions, etc.).</p>
-<p>The report uses incidence data from 3 different data-sources:</p>
+<p>A key input for the analysis is the <strong>incidence rate</strong> of the side-effect. It is required to be able to determine the expected cases. It is also important to have data stratified by groups to be able to understand the effects for individual subgroups and not just the overall population. That is because the OE ratio can be &lt;1 for the overall population but out of proportion for individual subgroups who are more at risk (e.g., young people, people with certain pre-conditions, etc.).</p>
+<p>The report uses incidence data from 3 different data sources:</p>
 <ul>
 <li>Coagulation disorder: ARS from Italy</li>
 <li>Disseminated intravascular coagulation: FISABIO from Spain</li>
@@ -284,11 +284,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>Disseminated intravascular coagulation (DIC) is a rare but serious condition that causes abnormal blood clotting throughout the body’s blood vessels. It is caused by another disease or condition, such as an infection or injury, that makes the body’s normal blood clotting process become overactive. <a href="https://www.nhlbi.nih.gov/health-topics/disseminated-intravascular-coagulation">Source: US NIH</a>
-</div>
+<p>Disseminated intravascular coagulation (DIC) is a rare but serious condition that causes abnormal blood clotting throughout the body’s blood vessels. It is caused by another disease or condition, such as an infection or injury, that makes the body’s normal blood clotting process become overactive. <a href="https://www.nhlbi.nih.gov/health-topics/disseminated-intravascular-coagulation">Source</a></p>
 
 </div>
 </div>
@@ -407,9 +403,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Cerebral venous sinus thrombosis (CVST) occurs when a blood clot forms in the brain’s venous sinuses. This  prevents blood from draining out of the brain. As a result, blood cells may break and leak blood into the brain tissues, forming a hemorrhage.</p>
-<p>This chain of events is part of a stroke that can occur in adults and children. It can occur even in newborns and babies in the womb. A stroke can damage the brain and central nervous system. A stroke is serious and requires immediate medical attention.</p>
-<p><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/cerebral-venous-sinus-thrombosis">Source</a></p>
+<p>Cerebral venous sinus thrombosis (CVST) occurs when a blood clot forms in the brain’s venous sinuses. This  prevents blood from draining out of the brain. As a result, blood cells may break and leak blood into the brain tissues, forming a hemorrhage. This chain of events is part of a stroke that can occur in adults and children. It can occur even in newborns and babies in the womb. A stroke can damage the brain and central nervous system. A stroke is serious and requires immediate medical attention. <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/cerebral-venous-sinus-thrombosis">Source</a></p>
 
 </div>
 </div>
@@ -417,7 +411,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For Cerebral Venous Sinus Thrombosis, we see similar pattern as before, with OE &gt; 1 for ages below 60.</p>
+<p>For Cerebral Venous Sinus Thrombosis, we see a similar pattern as before, with OE &gt; 1 for ages below 50.</p>
 
 </div>
 </div>
@@ -498,7 +492,8 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We finally will look at all ambolic and thrombotic events.</p>
+<p>We will finally look at all embolic and thrombotic events.</p>
+<p>Coagulation disorders are disruptions in the body’s ability to control blood clotting. Coagulation disorders can result in either a hemorrhage (too little clotting that causes an increased risk of bleeding) or thrombosis (too much clotting that causes blood clots to obstruct blood flow). <a href="https://www.rileychildrens.org/health-info/coagulation-disorders">Source</a></p>
 
 </div>
 </div>
@@ -506,7 +501,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When looking at all Embolic and thrombotic events, all expected cases are above the observed except for the groups 20-29 and 30-49.</p>
+<p>When looking at all embolic and thrombotic events, we have the same situation as before where OE &gt; 1 for age &lt; 50.</p>
 
 </div>
 </div>
@@ -587,7 +582,7 @@ And this brings us to one of the main conclusions of this analysis: <strong>We d
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can conclude that there is no evidence that the Astra Zeneca vaccine leads to adverse conditions. But it's important not to confuse absence of evidence with evidence of absence. What this means is that while we can't prove there is a link, we can't disprove it either, and the link may still exist. From a risk perspective, the risk is not zero.</p>
+<p>We can conclude that there is no evidence that the Astra Zeneca vaccine leads to adverse conditions, despite the fact that we are getting OE &gt; 1 for populations under 50. But it's important not to confuse absence of evidence with evidence of absence. What this means is that while we can't prove there is a link, we can't disprove it either, and the link may still exist. From a risk perspective, the risk is not zero.</p>
 <p>But not taking a vaccine also has a risk: a quarter of people who end up in intensive care with Covid have some form of clot resulting from the virus (<a href="https://www.bbc.com/news/explainers-56665396">Source</a>). The vaccine is objectively saving hundreds of thousands of lives at the moment, and that is why, after clinical trials passed, the burden of proof falls into proving it is not safe and not the other way around.</p>
 <p>You can think of this logic as analogous to the presumption of innocence. While we may risk having guilty people running around in our society, the risk of a totalitarian state where this is not required is greater.
 So for the moment, the Astra Zeneca Covid-19 vaccine is innocent until proven otherwise.</p>
